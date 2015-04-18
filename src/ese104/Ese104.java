@@ -8,9 +8,13 @@ public class Ese104 {
 		
 		Cliente cliente = new Cliente("Mario", "Rossi");
 		Filiale filiale = new Filiale(1);
-		Pacchetto pacchetto = new Pacchetto("P57", "Weekend a Parigi", 3);
-		Prenotazione prenotazione = new Prenotazione("Pr341", 20, cliente, filiale);
+		Pacchetto pacchetto = new Pacchetto("P57", "Weekend a Parigi", 1);
+		Prenotazione prenotazione=new Prenotazione("Pr341", 9, cliente, filiale);
 		
 		pacchetto.addPrenotazione(prenotazione);	
+		
+		for(int i=0; i<pacchetto.getPrenotazione().size(); i++){
+			System.out.println(pacchetto.getPrenotazione().elementAt(i).toString());		
 		}
+	}
 }

@@ -14,7 +14,6 @@ public class Pacchetto {
 		this.postiTotali=postiTotali;
 		this.prenotazione=new Vector<Prenotazione>();
 	}
-	
 	public void addPrenotazione(Prenotazione p) throws Exception{
 		if(this.getPostiDisponibili() > 0 ){
 			prenotazione.addElement(p);
@@ -25,7 +24,7 @@ public class Pacchetto {
 	}
 	
 	public int getPostiDisponibili(){
-		
+		return this.postiTotali-prenotazione.size();
 	}
 	
 	public Vector<Prenotazione> getPrenotazione(){
